@@ -1,7 +1,7 @@
 #+TITLE: wayweather
 
 Simple script to display hourly weather from weather.com
-| 21:00 3° 70% | 22:00 3° 35% | 23:00 3° 7% |
+\| 19:00 11° 0% SW 30 km/h \| 20:00 10° 12% SW 27 km/h \| 21:00 10° 13% SW 25 km/h \|
 
 * Setup
 ** Update Config with Location ID
