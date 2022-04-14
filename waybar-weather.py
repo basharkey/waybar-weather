@@ -13,7 +13,7 @@ hours = soup.find_all("details", id=re.compile("detailIndex.*"))
 
 data = []
 for hour in hours:
-    time = hour.find("h2", attrs={"data-testid":"daypartName"}).text
+    time = hour.find("h3", attrs={"data-testid":"daypartName"}).text
     temp = hour.find("span", attrs={"data-testid":"TemperatureValue"}).text
     precip = hour.find("span", attrs={"data-testid":"PercentageValue"}).text
     data.append([time, temp, precip])
