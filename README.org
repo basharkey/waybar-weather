@@ -1,0 +1,23 @@
+#+TITLE: wayweather
+
+Simple script to display hourly weather from weather.com
+| 21:00 3° 70% | 22:00 3° 35% | 23:00 3° 7% |
+
+* Setup
+** Update Config with Location ID
+Obtain location ID from weather.com URL
+#+begin_example
+https://weather.com/en-IN/weather/hourbyhour/l/31fa7b6da0d67b704f144e94301d921023ab7bfe5a7de83b036bb1a652989d23 <- Location ID
+#+end_example
+
+Update wayweather.yml with location ID
+#+begin_example
+output_length: 3
+location_id: 31fa7b6da0d67b704f144e94301d921023ab7bfe5a7de83b036bb1a652989d23
+#+end_example
+
+** Run Install Script
+#+begin_example
+chmod +x install.sh
+./install.sh
+#+end_example
