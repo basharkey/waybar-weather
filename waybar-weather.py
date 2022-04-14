@@ -16,8 +16,9 @@ for hour in hours:
     time = hour.find("h3", attrs={"data-testid":"daypartName"}).text
     temp = hour.find("span", attrs={"data-testid":"TemperatureValue"}).text
     precip = hour.find("span", attrs={"data-testid":"PercentageValue"}).text
-    data.append([time, temp, precip])
+    wind = hour.find("span", attrs={"data-testid":"Wind"}).text
+    data.append([time, temp, precip, wind])
 
 print("|", end="")
 for i in range(output_len):
-    print(" " + data[i][0], data[i][1], data[i][2], end=" |")
+    print(" " + data[i][0], data[i][1], data[i][2], data[i][3], end=" |")
