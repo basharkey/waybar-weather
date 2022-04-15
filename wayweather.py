@@ -20,13 +20,13 @@ try:
     with open(config_file) as f:
         config = yaml.load(f, Loader=yaml.FullLoader)
 except Exception as err:
-     raise Exception("config not found") from err
+     raise OSError("config not found") from err
 
 try:
     output_len = config['output_length']
     location_id = config['location_id']
 except Exception as err:
-    raise Exception("invalid config") from err
+    raise KeyError("invalid config") from err
 
 
 url = 'https://weather.com/en-IN/weather/hourbyhour/l/' + location_id
