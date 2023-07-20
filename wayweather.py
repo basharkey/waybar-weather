@@ -40,9 +40,12 @@ for hour in hours:
     time = hour.find('h3', attrs={'data-testid':'daypartName'}).text
     temp = hour.find('span', attrs={'data-testid':'TemperatureValue'}).text
     precip = hour.find('span', attrs={'data-testid':'PercentageValue'}).text
-    wind = hour.find('span', attrs={'data-testid':'Wind'}).text
-    data.append([time, temp, precip, wind])
+    wind = hour.find('span', attrs={'data-testid':'Wind'}).text.split()
+    wind_direction = wind[0]
+    wind_speed = wind[1]
+    data.append({'time': time, 'temp': temp, 'precip': precip, 'wind_direction': wind_direction, 'wind_speed': wind_speed})
 
 print("|", end="")
 for i in range(output_len):
-    print(" " + data[i][0], data[i][1], data[i][2], data[i][3], end=" |")
+    print(f" {data[i]['time']} {data[i]['temp']:>4} {data[i]['precip']:>4} {data[i]['wind_direction']:>3} {data[i]['wind_speed']:>3} km/h", end=" |")
+
