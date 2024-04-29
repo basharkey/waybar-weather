@@ -6,7 +6,7 @@ Simple script to display hourly weather from weather.gc.ca
 
 * Setup
 ** Update Config with Location ID
-Obtain location ID from your weather.gc.ca URL, for example the location ID for Toronto is `143`:
+Obtain location ID from your weather.gc.ca URL, for example the location ID for Toronto is 143:
 #+begin_example
 https://weather.gc.ca/forecast/hourly/on-143_metric_e.html
 #+end_example
