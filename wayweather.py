@@ -42,9 +42,9 @@ for hour in hours:
         temp = hour.find('td', attrs={'headers':'header2'}).text.strip(' ')
         cond = hour.find('td', attrs={'headers':'header3'}).text.strip(' ')
         precip = hour.find('td', attrs={'headers':'header4'}).text.strip(' ')
-        wind = hour.find('td', attrs={'headers':'header5'}).text.split(' ', maxsplit=1)
-        wind_direction = wind[0].strip(' ')
-        wind_speed = wind[1].strip(' ')
+        wind = hour.find('td', attrs={'headers':'header5'}).text.split(' ')
+        wind_direction = wind[0]
+        wind_speed = wind[1]
         data.append({'time': time, 'temp': temp, 'precip': precip, 'wind_direction': wind_direction, 'wind_speed': wind_speed})
     except:
         pass
