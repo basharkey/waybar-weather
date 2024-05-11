@@ -51,5 +51,5 @@ for hour in hours:
 
 print("|", end="")
 for i in range(output_len):
-    print(f" {data[i]['time']} {data[i]['temp']:>4}° {data[i]['precip']:>4}% {data[i]['wind_direction']:>3} {data[i]['wind_speed']:>3} km/h", end=" |")
+    print(f" {data[i]['time']} {data[i]['temp']:>3}° {data[i]['precip']:>3}% {data[i]['wind_direction']:>2} {data[i]['wind_speed']:>2} km/h", end=" |")
 
